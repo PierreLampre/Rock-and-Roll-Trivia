@@ -1,0 +1,60 @@
+body {
+    background-image: url("../img/rockbg.png");
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 20% 80%; 
+    margin: 0 auto;
+    margin-top: 1em;
+    background-image: url("../img/blackboard.png");
+    height: 24em;
+    width: 50.76em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+    justify-content: center;
+}
+
+#trivia-heading {
+    display: grid;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(209, 206, 206);
+    font-size: 44px;
+    height: 1.6em;
+}
+
+#content-container {
+    display: grid;
+    grid-template-rows: 10% 10% 80%;
+    font-family: 'Muli', sans-serif;
+    color:rgb(209, 206, 206);
+    text-align: center;
+    font-size: 24px;
+    margin: 2em;
+}
+
+#time-remaining {
+   
+}
+
+#question-container {
+    margin-top: 1em;
+}
+
+#choices-container{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    margin-top: 2em;
+    padding-top: .7em;
+    grid-gap: 15px;
+}
+
+.choice-class {
+    border: 2px solid rgb(209, 206, 206);
+    align-self: center;
+}
