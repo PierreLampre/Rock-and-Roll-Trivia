@@ -2,7 +2,7 @@ const questions = {
     one: {
         text: "What make and model of electric guitar did Tony Iommi famously use?",
         answers: ["Fender Telecaster", "Jackson Flying V", "Gibson SG", "Taylor 144ce"],
-        correctAnswer: "Gibson SG"
+        correctAnswer: "Gibson SG",
     },
    two: {
         text: "Where was Boston's Self Titled Album recorded?",
@@ -25,4 +25,25 @@ const questions = {
        correctAnswer: "London"
    }
 }
+
+let timeRemaining = 30;
+let questionsWrong = 0;
+let questionsRight = 0;
+
+function decrement() {
+
+    timeRemaining--;
+
+    $("#time-remaining").text("Time Remaining: " + timeRemaining);
+
+    if (timeRemaining === 0) {
+        questionsWrong++;
+    }
+  }
+
+$("#start-button").on("click", function(){
+    $("#start-button").css("display", "none");
+    $("#question-container,#choices-container,#time-remaining").css("display", "grid");
+    setInterval(decrement, 1000);
+})
 

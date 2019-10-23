@@ -27,6 +27,17 @@ body {
     height: 1.6em;
 }
 
+#start-button {
+    display: grid;
+    justify-self: center;
+    font-family: 'Muli', sans-serif;
+    background-color: rgb(41, 38, 38);
+    color: rgb(209, 206, 206);
+    height: 3em;
+    width: 7em;
+    margin-top: 11em;
+}
+
 #content-container {
     display: grid;
     grid-template-rows: 10% 10% 80%;
@@ -38,18 +49,23 @@ body {
 }
 
 #time-remaining {
-   
+   display: none;
+}
+
+#timeCounter {
+    display: inline-grid;
 }
 
 #question-container {
+    display: none;
     margin-top: 1em;
 }
 
 #choices-container{
-    display: grid;
+    display: none;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
-    margin-top: 2em;
+    margin-top: 1em;
     padding-top: .7em;
     grid-gap: 15px;
 }
