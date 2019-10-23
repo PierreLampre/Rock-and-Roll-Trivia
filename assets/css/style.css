@@ -8,7 +8,7 @@ body {
     display: grid;
     grid-template-rows: 20% 80%; 
     margin: 0 auto;
-    margin-top: 1em;
+    margin-top: 2em;
     background-image: url("../img/blackboard.png");
     height: 24em;
     width: 50.76em;
@@ -58,3 +58,23 @@ body {
     border: 2px solid rgb(209, 206, 206);
     align-self: center;
 }
+
+/* A Media Query Just For Me */
+
+/* @media screen and (max-width: 1950px) {
+
+#container {
+    height: 38.4em;
+    width: 76.8em;
+    margin-top: 7em;
+}
+
+#trivia-heading {
+    font-size: 64px;
+}
+
+#content-container {
+    font-size: 34px;
+}
+    
+} */
