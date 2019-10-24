@@ -25,6 +25,7 @@ body {
     color: rgb(209, 206, 206);
     font-size: 44px;
     height: 1.6em;
+    margin-top: -7px;
 }
 
 #start-button {
@@ -46,10 +47,13 @@ body {
     text-align: center;
     font-size: 24px;
     margin: 2em;
+    margin-top: -2px;
 }
 
 #time-remaining {
    display: none;
+   margin-top: -10px;
+   padding-top: 7px;
 }
 
 #timeCounter {
@@ -59,6 +63,7 @@ body {
 #question-container {
     display: none;
     margin-top: 1em;
+    margin-bottom: 50px;
 }
 
 #choices-container{
@@ -86,10 +91,10 @@ body {
     display: grid;
     justify-self: center;
     align-self: center;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-top: -15px;
-    margin-left: 190px;
+    margin-left: 198px;
     border: 2px solid grey;
     border-radius: 15px;
 }
@@ -98,12 +103,29 @@ body {
     display: grid;
     justify-self: center;
     align-self: center;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-top: -15px;
-    margin-left: 240px;
+    margin-left: 246px;
     border: 2px solid grey;
     border-radius: 15px;
+}
+
+#score {
+    display: none;
+    text-align: center;
+    margin-left: 90px;
+    width: 200px;
+}
+
+#start-over {
+    display: none;
+    justify-self: center;
+    font-family: 'Muli', sans-serif;
+    background-color: rgb(41, 38, 38);
+    color: rgb(209, 206, 206);
+    height: 3em;
+    width: 7em;
 }
 
 /* A Media Query Just For Me */
