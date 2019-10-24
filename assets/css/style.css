@@ -205,6 +205,12 @@ body {
     #content-container {
         font-size: 16px;
     }
+
+    #choices-container{
+        margin-top: 3.5em;
+        padding-top: .4em;
+        grid-gap: 15px;
+    }
     
     #thatImg, #thatObstinateImg {
         width: 120px;
@@ -224,11 +230,14 @@ body {
 
     #container {
       
-        height: 13.2em;
-        width: 21.61em;
+        height: 10.2em;
+        width: 18.61em;
         border-left: 8px solid rgb(150, 85, 42);
         border-right: 8px solid rgb(150, 85, 42);
-     
+    }
+
+    #start-button {
+        margin-top: 7em;
     }
 
     #trivia-heading {
@@ -241,15 +250,25 @@ body {
     }
     
     #thatImg, #thatObstinateImg {
-        width: 120px;
-        height: 120px;
-        margin-left: 180px;
+        width: 90px;
+        height: 90px;
+    }
+
+    #img {
+        padding-right: 22px;
+        padding-bottom: 13px;
     }
 
     #score {
-        padding-right: 50px;
-        width: 120px;
-        font-size: 18px;
+        padding-right: 53px;
+        margin-top: -15px;
+        width: 80px;
+        font-size: 10px;
+    }
+
+    .choice-class {
+        margin: 0;
+        padding: 0;
     }
 
 }
