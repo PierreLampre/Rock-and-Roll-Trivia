@@ -235,7 +235,7 @@ body {
     #container {
       
         height: 10.2em;
-        width: 18.61em;
+        width: 15.61em;
         border-left: 8px solid rgb(150, 85, 42);
         border-right: 8px solid rgb(150, 85, 42);
     }
@@ -250,7 +250,7 @@ body {
     
 
     #content-container {
-        font-size: 12px;
+        font-size: 10px;
     }
     
     #thatImg, #thatObstinateImg {
@@ -270,11 +270,12 @@ body {
         font-size: 10px;
     }
 
-    .choice-class {
-        margin: 0;
-        padding: 0;
+    #start-over {
+        height: 3em;
+        width: 6em;
+        margin-top: -10px;
     }
-
+    
 }
 
 
