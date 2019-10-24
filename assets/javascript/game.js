@@ -34,7 +34,7 @@ function decrement() {
         $(".choice-class").css("display", "none");
         questionDiv.textContent = "The answer is " + gameContent.correctAnswers[theNumber];
         timeRemDiv.textContent = "Oops! Fail!";
-        $("#img").html("<img src='assets/img/doh.png' width='200px'>");
+        $("#img").html("<img src='assets/img/doh.png' id='thatImg'>");
         $("#img").css("display", "grid");
         theNumber++;
         questionsWrong++;
@@ -52,8 +52,6 @@ function startGameCounter() {
 function stopGameCounter() {
     clearInterval(setIt);
 }
-
-
 
 function theGameItself() {
     if (roundCount == 5){
@@ -79,7 +77,25 @@ function theGameItself() {
 
 }
 
+function correct() {
+    timeRemDiv.textContent = "Correct! Rock On!";
+    $("#img").html("<img src=" + gameContent.images[theNumber] + " id='thatImg'>");
+    $("#img").css("display", "grid");
+    theNumber++;
+    questionsRight++;
+    timeRemaining = 30;
+    setTimeout(theGameItself, 5000);
+}
 
+function incorrect() {
+    timeRemDiv.textContent = "Oops! Fail!";
+    $("#img").html("<img src='assets/img/doh.png' id='thatImg'>");
+    $("#img").css("display", "grid");
+    theNumber++;
+    questionsWrong++;
+    timeRemaining = 30;
+    setTimeout(theGameItself, 5000);
+}
 
 $("#choice1").on("click", function () {
     questionDiv.textContent = "The answer is " + gameContent.correctAnswers[theNumber];
@@ -87,21 +103,9 @@ $("#choice1").on("click", function () {
     $(".choice-class").css("display", "none");
     roundCount++;
     if ((choice1.textContent == gameContent.correctAnswers[theNumber]) && (roundCount < 5)) {
-        timeRemDiv.textContent = "Correct! Rock On!";
-        $("#img").html("<img src=" + gameContent.images[theNumber] + " id='thatImg'>");
-        $("#img").css("display", "grid");
-        theNumber++;
-        questionsRight++;
-        timeRemaining = 30;
-        setTimeout(theGameItself, 5000);
+        correct();
     }  else {
-        timeRemDiv.textContent = "Oops! Fail!";
-        $("#img").html("<img src='assets/img/doh.png' id='thatImg'>");
-        $("#img").css("display", "grid");
-        theNumber++;
-        questionsWrong++;
-        timeRemaining = 30;
-        setTimeout(theGameItself, 5000);
+       incorrect();
     }
 });
 
@@ -111,21 +115,9 @@ $("#choice2").on("click", function () {
     $(".choice-class").css("display", "none");
     roundCount++;
     if (choice2.textContent == gameContent.correctAnswers[theNumber]) {
-        timeRemDiv.textContent = "Correct! Rock On!";
-        $("#img").html("<img src=" + gameContent.images[theNumber] + " id='thatImg'>");
-        $("#img").css("display", "grid");
-        theNumber++;
-        questionsRight++;
-        timeRemaining = 30;
-        setTimeout(theGameItself, 5000);
+        correct();
     } else {
-        timeRemDiv.textContent = "Oops! Fail!";
-        $("#img").html("<img src='assets/img/doh.png' id='thatImg'>");
-        $("#img").css("display", "grid");
-        theNumber++;
-        questionsWrong++;
-        timeRemaining = 30;
-        setTimeout(theGameItself, 5000);
+        incorrect();
     }
 });
 
@@ -135,21 +127,9 @@ $("#choice3").on("click", function () {
     $(".choice-class").css("display", "none");
     roundCount++;
     if (choice3.textContent == gameContent.correctAnswers[theNumber]) {
-        timeRemDiv.textContent = "Correct! Rock On!";
-        $("#img").html("<img src=" + gameContent.images[theNumber] + " id='thatImg'>");
-        $("#img").css("display", "grid");
-        theNumber++;
-        questionsRight++;
-        timeRemaining = 30;
-        setTimeout(theGameItself, 5000);
+        correct();
     } else {
-        timeRemDiv.textContent = "Oops! Fail!";
-        $("#img").html("<img src='assets/img/doh.png' id='thatImg'>");
-        $("#img").css("display", "grid");
-        theNumber++;
-        questionsWrong++;
-        timeRemaining = 30;
-        setTimeout(theGameItself, 5000);
+        incorrect();
     }
 });
 
@@ -167,13 +147,7 @@ $("#choice4").on("click", function () {
         timeRemaining = 30;
         setTimeout(theGameItself, 5000);
     } else {
-        timeRemDiv.textContent = "Oops! Fail!";
-        $("#img").html("<img src='assets/img/doh.png' id='thatImg'>");
-        $("#img").css("display", "grid");
-        theNumber++;
-        questionsWrong++;
-        timeRemaining = 30;
-        setTimeout(theGameItself, 5000);
+        incorrect();
     }
 });
 
