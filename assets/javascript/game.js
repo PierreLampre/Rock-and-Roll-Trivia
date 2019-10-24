@@ -22,6 +22,11 @@ const choice1 = document.getElementById("choice1");
 const choice2 = document.getElementById("choice2");
 const choice3 = document.getElementById("choice3");
 const choice4 = document.getElementById("choice4");
+const background = document.getElementById("myAudio1");
+const excellent = document.getElementById("myAudio2");
+const doh = document.getElementById("myAudio3");
+const mario3 = document.getElementById("myAudio4");
+
 
 function decrement() {
 
@@ -55,6 +60,7 @@ function stopGameCounter() {
 
 function theGameItself() {
     if (roundCount == 5){
+        mario3.play();
         timeRemDiv.textContent = "That's the game!";
         questionDiv.textContent = "Here's how you did...";
         $("#img").css("display", "none");
@@ -62,6 +68,7 @@ function theGameItself() {
         $("#score").text("Wins: " + questionsRight + " Bummers: " + questionsWrong + " Score: " + (questionsRight*20) + "%");
         $("#start-over").css("display", "grid");
     } else {
+    background.play();
     questionDiv.textContent = gameContent.questions[theNumber];
     choice1.textContent = gameContent.answers[theNumber][0];
     choice2.textContent = gameContent.answers[theNumber][1];
@@ -78,6 +85,9 @@ function theGameItself() {
 }
 
 function correct() {
+    background.pause();
+    background.currentTime = 0;
+    excellent.play();
     timeRemDiv.textContent = "Correct! Rock On!";
     $("#img").html("<img src=" + gameContent.images[theNumber] + " id='thatImg'>");
     $("#img").css("display", "grid");
@@ -88,6 +98,9 @@ function correct() {
 }
 
 function incorrect() {
+    background.pause();
+    background.currentTime = 0;
+    doh.play();
     timeRemDiv.textContent = "Oops! Fail!";
     $("#img").html("<img src='assets/img/doh.png' id='thatImg'>");
     $("#img").css("display", "grid");
@@ -134,11 +147,16 @@ $("#choice3").on("click", function () {
 });
 
 $("#choice4").on("click", function () {
+    background.pause();
+    background.currentTime = 0;
     questionDiv.textContent = "The answer is " + gameContent.correctAnswers[theNumber];
     stopGameCounter();
     $(".choice-class").css("display", "none");
     roundCount++;
     if (choice4.textContent == gameContent.correctAnswers[theNumber]) {
+        background.pause();
+        background.currentTime = 0;
+        excellent.play();
         timeRemDiv.textContent = "Correct! Rock On!";
         $("#img").html("<img src=" + gameContent.images[theNumber] + " id='thatObstinateImg'>");
         $("#img").css("display", "grid");
