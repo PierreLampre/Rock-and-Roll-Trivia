@@ -228,6 +228,10 @@ body {
 
 @media screen and (max-width: 600px) {
 
+    body {
+        background-repeat: repeat;
+    }
+
     #container {
       
         height: 10.2em;
