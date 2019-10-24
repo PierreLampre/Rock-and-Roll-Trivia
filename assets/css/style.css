@@ -192,6 +192,7 @@ body {
 
     #container {
       
+        margin-top: 85px;
         height: 15.2em;
         width: 32.61em;
      
@@ -238,6 +239,7 @@ body {
         width: 15.61em;
         border-left: 8px solid rgb(150, 85, 42);
         border-right: 8px solid rgb(150, 85, 42);
+        margin-top: 145px;
     }
 
     #start-button {
