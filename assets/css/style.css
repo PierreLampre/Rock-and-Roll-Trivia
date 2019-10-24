@@ -154,3 +154,104 @@ body {
 }
     
 } */
+
+@media screen and (max-width: 960px) {
+
+    #container {
+      
+        height: 18.9em;
+        width: 40.76em;
+     
+    }
+
+    #trivia-heading {
+        font-size: 38px;
+    }
+    
+
+    #content-container {
+        font-size: 20px;
+    }
+    
+    #thatImg, #thatObstinateImg {
+        width: 170px;
+        height: 170px;
+        margin-left: 180px;
+    }
+
+    #score {
+        margin-left: 60px;
+        margin-top: -5px;
+        width: 200px;
+        font-size: 26px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #container {
+      
+        height: 15.2em;
+        width: 32.61em;
+     
+    }
+
+    #trivia-heading {
+        font-size: 30px;
+    }
+    
+
+    #content-container {
+        font-size: 16px;
+    }
+    
+    #thatImg, #thatObstinateImg {
+        width: 120px;
+        height: 120px;
+        margin-left: 180px;
+    }
+
+    #score {
+        padding-left: 6px;
+        width: 120px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #container {
+      
+        height: 13.2em;
+        width: 21.61em;
+        border-left: 8px solid rgb(150, 85, 42);
+        border-right: 8px solid rgb(150, 85, 42);
+     
+    }
+
+    #trivia-heading {
+        font-size: 20px;
+    }
+    
+
+    #content-container {
+        font-size: 12px;
+    }
+    
+    #thatImg, #thatObstinateImg {
+        width: 120px;
+        height: 120px;
+        margin-left: 180px;
+    }
+
+    #score {
+        padding-right: 50px;
+        width: 120px;
+        font-size: 18px;
+    }
+
+}
+
+
