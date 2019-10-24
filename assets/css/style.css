@@ -65,7 +65,7 @@ body {
     display: none;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
-    margin-top: 1em;
+    margin-top: 2em;
     padding-top: .7em;
     grid-gap: 15px;
 }
@@ -73,6 +73,37 @@ body {
 .choice-class {
     border: 2px solid rgb(209, 206, 206);
     align-self: center;
+}
+
+#img {
+    display: none;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#thatImg {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    margin-top: -15px;
+    margin-left: 190px;
+    border: 2px solid grey;
+    border-radius: 15px;
+}
+
+#thatObstinateImg {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    margin-top: -15px;
+    margin-left: 240px;
+    border: 2px solid grey;
+    border-radius: 15px;
 }
 
 /* A Media Query Just For Me */
