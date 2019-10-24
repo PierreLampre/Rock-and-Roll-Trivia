@@ -35,6 +35,7 @@ function decrement() {
     $("#time-remaining").text("Time Remaining: " + timeRemaining);
 
     if (timeRemaining === 0) {
+        doh.play();
         stopGameCounter();
         $(".choice-class").css("display", "none");
         questionDiv.textContent = "The answer is " + gameContent.correctAnswers[theNumber];
@@ -43,6 +44,7 @@ function decrement() {
         $("#img").css("display", "grid");
         theNumber++;
         questionsWrong++;
+        roundCount++;
         timeRemaining = 30;
         setTimeout(theGameItself, 5000);
     }
